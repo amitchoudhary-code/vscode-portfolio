@@ -2,97 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VS Code Portfolio</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
 </head>
 <body>
   <div class="app">
     <!-- Sidebar -->
     <aside class="sidebar">
-      <div class="logo">📁 Explorer</div>
-      <ul class="files">
-        <li data-section="about" class="file-item">📄 index.html</li>
-
-        <li class="folder">📁 projects
-          <ul class="sub-files">
-            <li data-section="project1" class="file-item">📄 project1.html</li>
-            <li data-section="project2" class="file-item">📄 project2.html</li>
-          </ul>
-        </li>
-
-        <li class="folder">📁 contact
-          <ul class="sub-files">
-            <li data-section="email" class="file-item">📄 email.html</li>
-            <li data-section="social" class="file-item">📄 social.html</li>
-          </ul>
-        </li>
+      <div class="sidebar-title">📁 Explorer</div>
+      <ul class="file-tree">
+        <li>📄 index.html</li>
+        <li>🎨 style.css</li>
+        <li>⚙️ main.js</li>
+        <li>📁 projects</li>
+        <li>📁 contact</li>
       </ul>
     </aside>
 
-    <!-- Main Section -->
+    <!-- Main content -->
     <main class="main">
-      <!-- Tab Bar -->
-      <div class="tabs" id="tabs">
-        <div class="tab active">index.html ✕</div>
-        <input type="text" id="searchInput" placeholder="Find..." />
+      <!-- Top tabs -->
+      <div class="tabs">
+        <div class="tab active">index.html ✖</div>
       </div>
 
-      <!-- Editor Section -->
+      <!-- Editor section -->
       <div class="editor">
-        <section id="about" class="section active">
-          <div class="fake-tab">📄 index.html</div>
-          <h1><span id="typed-text"></span><span class="cursor">|</span></h1>
-        </section>
-
-        <section id="project1" class="section">
-          <div class="fake-tab">📄 project1.html</div>
-          <h2>🚀 VS Code Portfolio Website</h2>
-          <p>This is a fully responsive portfolio website designed to look like Visual Studio Code. It includes:</p>
-          <ul>
-            <li>🔸 Sidebar with folder-like navigation</li>
-            <li>🔸 Dynamic section switching using JavaScript</li>
-            <li>🔸 Theme switcher for light/dark mode</li>
-            <li>🔸 Typing animation and clock feature</li>
-          </ul>
-        </section>
-
-        <section id="project2" class="section">
-          <div class="fake-tab">📄 project2.html</div>
-          <h2>⏰ Analog Clock with JavaScript</h2>
-          <p>This project demonstrates a fully functional analog clock built using HTML, CSS, and JavaScript. Features include:</p>
-          <ul>
-            <li>⏳ Real-time hour, minute, and second hands</li>
-            <li>🎨 Custom SVG-based styling</li>
-            <li>📱 Responsive layout</li>
-            <li>🧠 Great practice for DOM manipulation and time handling</li>
-          </ul>
-        </section>
-
-        <section id="email" class="section">
-          <div class="fake-tab">📄 email.html</div>
-          <h2>📧 Contact Me by Email</h2>
-          <p><strong>Email:</strong> <a href="mailto:amit.choudhary.tech@gmail.com">amit.choudhary.tech@gmail.com</a></p>
-        </section>
-
-        <section id="social" class="section">
-          <div class="fake-tab">📄 social.html</div>
-          <h2>🌐 Connect With Me</h2>
-          <ul>
-            <li>💼 <a href="https://www.linkedin.com/in/amit-choudhary1/">LinkedIn</a></li>
-            <li>👨‍💻 <a href="https://github.com/amitchoudhary-code">GitHub</a></li>
-            <li>🐦 <a href="#">Twitter</a></li>
-          </ul>
-        </section>
-      </div>
-
-      <!-- Status Bar -->
-      <footer class="status-bar">
-        <div id="clock">🕒</div>
-        <div id="themeToggle" title="Toggle Theme">🌙</div>
-      </footer>
-    </main>
-  </div>
-  <script src="main.js"></script>
-</body>
-</html>
+        <h1>Hi, I'm Amit Choudhary 👋</h1>
+        <p>This is my VS
