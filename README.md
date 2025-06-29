@@ -28,7 +28,7 @@ Designed using **HTML**, **CSS**, and **JavaScript**, this project mimics the st
 
 ## 🚀 Live Demo
 
-[🌐 Click here to view the live portfolio](https://yourusername.github.io/vscode-portfolio)
+[🌐 Click here to view the live portfolio](https://github.com/amitchoudhary-code/vscode-portfolio)
 
 > Replace with your actual GitHub Pages or Netlify link
 
