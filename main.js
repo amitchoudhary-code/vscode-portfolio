@@ -11,14 +11,12 @@ fileItems.forEach(item => {
 
     const sectionId = item.getAttribute('data-section');
     const section = document.getElementById(sectionId);
-    if (section) {
-      section.classList.add('active');
-      tab.textContent = `${sectionId}.html ✖`;
-    }
+    section.classList.add('active');
+    tab.textContent = `${sectionId}.html ✕`;
   });
 });
 
-// Folder toggle (if you later use folder-style UI)
+// Folder toggle
 const folders = document.querySelectorAll('.folder');
 folders.forEach(folder => {
   folder.addEventListener('click', (e) => {
@@ -31,12 +29,12 @@ folders.forEach(folder => {
 function updateClock() {
   const clock = document.getElementById('clock');
   const now = new Date();
-  clock.textContent = `🕓 ${now.toLocaleTimeString()}`;
+  clock.textContent = now.toLocaleTimeString();
 }
 setInterval(updateClock, 1000);
 updateClock();
 
-// Theme toggle with localStorage
+// Theme toggle
 const themeToggle = document.getElementById('themeToggle');
 const savedTheme = localStorage.getItem('theme');
 
@@ -88,20 +86,17 @@ function eraseText() {
 }
 setTimeout(typeNextChar, 1000);
 
-// Search feature
+// Search
 const searchInput = document.getElementById('searchInput');
 searchInput.addEventListener('input', () => {
   const keyword = searchInput.value.trim().toLowerCase();
-
-  // Remove existing highlights
   sections.forEach(section => {
-    section.innerHTML = section.innerHTML.replace(/<span class=\"highlight\">(.*?)<\\/span>/gi, '$1');
+    section.innerHTML = section.innerHTML.replace(/<span class="highlight">(.*?)<\/span>/gi, '$1');
   });
 
   if (keyword === '') return;
 
-  // Highlight matches in the active section
   const activeSection = document.querySelector('.section.active');
   const regex = new RegExp(`(${keyword})`, 'gi');
-  activeSection.innerHTML = activeSection.innerHTML.replace(regex, '<span class=\"highlight\">$1</span>');
+  activeSection.innerHTML = activeSection.innerHTML.replace(regex, '<span class="highlight">$1</span>');
 });
